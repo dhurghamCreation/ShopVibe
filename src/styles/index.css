@@ -1,0 +1,40 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+* {
+	scroll-behavior: smooth;
+}
+
+a,
+button,
+[role='button'],
+input,
+select,
+textarea {
+	transition: all 180ms ease;
+}
+
+img {
+	transition: transform 320ms ease, filter 220ms ease;
+}
+
+button:hover,
+[role='button']:hover {
+	transform: translateY(-1px);
+}
+
+button:active,
+[role='button']:active {
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
